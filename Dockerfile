@@ -18,6 +18,8 @@ RUN pip install setuptools
 RUN pip install wheel
 RUN pip install .
 
+RUN chown -R 1000:1000 /aquarius
+
 # config.ini configuration file variables
 ENV DB_MODULE='mongodb'
 ENV DB_HOSTNAME='localhost'
